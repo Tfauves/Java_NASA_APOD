@@ -25,7 +25,7 @@ public class TestController {
     public ResponseEntity<?> getAll () {
         String uri = "https://api.thedogapi.com/v1/breeds?api_key=" + apiKey;
         DogResponse response = restTemplate.getForObject(uri,DogResponse.class);
-        assert response != null;
+
         return ResponseEntity.ok(response.getBreeds());
     }
 }

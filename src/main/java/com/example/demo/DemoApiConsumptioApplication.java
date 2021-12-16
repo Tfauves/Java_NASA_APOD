@@ -13,10 +13,6 @@ public class DemoApiConsumptioApplication {
 		SpringApplication.run(DemoApiConsumptioApplication.class, args);
 
 	}
-//	@Bean
-//	public RestTemplate restTemplate() {
-//		return new RestTemplate();
-//	}
 
 	@Bean
 	public RestTemplate restTemplate() {
