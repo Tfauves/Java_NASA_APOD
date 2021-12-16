@@ -18,4 +18,9 @@ public class DemoApiConsumptioApplication {
 //		return new RestTemplate();
 //	}
 
+	@Bean
+	public RestTemplate restTemplate() {
+		return new RestTemplate();
+	}
+
 }
