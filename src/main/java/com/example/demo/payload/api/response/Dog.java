@@ -5,7 +5,83 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Dog {
+    public Weight getWeight() {
+        return weight;
+    }
 
+    public void setWeight(Weight weight) {
+        this.weight = weight;
+    }
+
+    public Height getHeight() {
+        return height;
+    }
+
+    public void setHeight(Height height) {
+        this.height = height;
+    }
+
+    private class Weight {
+        private String imperial;
+        private String metric;
+
+        public Weight() {
+        }
+
+        public Weight(String imperial, String metric) {
+            this.imperial = imperial;
+            this.metric = metric;
+        }
+
+        public String getImperial() {
+            return imperial;
+        }
+
+        public void setImperial(String imperial) {
+            this.imperial = imperial;
+        }
+
+        public String getMetric() {
+            return metric;
+        }
+
+        public void setMetric(String metric) {
+            this.metric = metric;
+        }
+    }
+
+    public class Height {
+        private String imperial;
+        private String metric;
+
+        public Height() {
+        }
+
+        public Height(String imperial, String metric) {
+            this.imperial = imperial;
+            this.metric = metric;
+        }
+
+        public String getImperial() {
+            return imperial;
+        }
+
+        public void setImperial(String imperial) {
+            this.imperial = imperial;
+        }
+
+        public String getMetric() {
+            return metric;
+        }
+
+        public void setMetric(String metric) {
+            this.metric = metric;
+        }
+    }
+
+
+    private Weight weight;
+    private Height height;
     private Integer id;
     private String name;
     private String bred_for;
@@ -17,7 +93,9 @@ public class Dog {
     public Dog() {
     }
 
-    public Dog(Integer id, String name, String bred_for, String breed_group, String life_span, String temperament, String origin) {
+    public Dog(Weight weight, Height height, Integer id, String name, String bred_for, String breed_group, String life_span, String temperament, String origin) {
+        this.weight = weight;
+        this.height = height;
         this.id = id;
         this.name = name;
         this.bred_for = bred_for;
