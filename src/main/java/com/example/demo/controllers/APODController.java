@@ -24,10 +24,10 @@ public class APODController {
     private String apiKey;
 
 @GetMapping
-    public ResponseEntity<?> getApod() {
+    public ResponseEntity<?> nasaApod() {
     String uri = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
     APOD apod = restTemplate.getForObject(uri, APOD.class);
-    assert apod != null;
-    return ResponseEntity.ok(apod.getExplanation());
+
+    return ResponseEntity.ok(apod);
 }
 }
