@@ -11,7 +11,7 @@ public class APOD {
     private String title;
     private String url;
 
-
+    public APOD() {}
 
     public APOD(String copyright, String date, String explanation, String hdurl, String media_type, String service_version, String title, String url) {
         this.copyright = copyright;
